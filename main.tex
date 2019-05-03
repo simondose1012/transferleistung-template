@@ -1,0 +1,75 @@
+% Anforderungen für Transferleistungen (Stand 03/2019):
+% % Umfang Auftragsklärung: 2000 Zeichen (Richtwert)
+% % Umfang Selbstreflexion: 2000 Zeichen (Richtwert)
+% % Umfang Transferleistung: 10 Textseiten +/- 10% (ohne Gliederung, Verzeichnisse, Anhänge, Abbildungen)
+% % Schriftgröße: Times New Roman (12pt) oder Arial (11pt)
+% % Ränder: Alle 2cm
+% % Zeilenabstand: 1,25 mit Blocksatz und Silbentrennung
+% % Zitation: übliche Zitierweise aus dem ausgewählten Fachgebiet
+
+\documentclass[12pt, a4paper, onecolumn, oneside, titlepage]{article}
+ 
+% Setzt alle Seiteränder auf 2cm
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage{subfiles} % Für mehr Übersicht werden die Kapitel in Subfiles ausgelagert
+\usepackage[T1]{fontenc} % Font wird westeuropäisch angefordert
+\usepackage[utf8]{inputenc} % Zeichensatz auf UTF8
+\usepackage{csquotes} % Aktiviert Zitate
+\usepackage{hyperref} % Aktiviert automatische Erkennung von Hyperlinks
+\usepackage{tikz} % Wird für die Zeichnungen direkt in LaTeX benötigt
+\usepackage{float} % Für korrekte Positionierung von Abbildungen
+\usepackage{graphicx} % Um Bilder einbinden zu können
+
+\usepackage[main=ngerman, english]{babel} % Setzt Dokument auf Deutsch
+\usepackage{microtype} % Wenn man dem Internet glaubt, macht dieses Paket allgemein einfach alles besser, also rein damit!
+
+\usepackage{pgfplots} % Für Diagramme und sowas
+\pgfplotsset{compat=1.15} % Setzt Version
+ 
+% Aktiviert Zeilenabstand von 1.25
+\usepackage{setspace}
+\setstretch{1.25}
+\usepackage{mathptmx} % Aktiviert Times New Roman als Standardschrift
+
+% Aktiviert Quellenverzeichnis mit APA-Style und legt Zitatstil für Fußleiste fest
+\usepackage[backend=biber, bibencoding=utf8, style=apa, citestyle=authortitle]{biblatex}
+% Füge zu Fußzeilen-Verweisen die Jahreszahl hinzu
+\usepackage{xpatch}
+\xapptobibmacro{cite}{\setunit{\nametitledelim}\printfield{year}}{}{}
+
+\addbibresource{quellen.bib} % Bindet Quellen aus quellen.bib ein
+\nocite{*} % Zeigt alle (auch nicht zitierten) Einträge der Quellendatei im Literaturverzeichnis an
+
+\begin{document}
+
+
+\pagestyle{empty} % Zu Anfang sollen keine Seitenzahlen angezeigt werden
+
+% Titelseite einbinden
+\subfile{Titelseite.tex}
+
+% Inhaltsverzeichnis einbinden
+\tableofcontents
+% Sections als oberste Ebene des Inhaltsverzeichnis festlegen
+\setcounter{tocdepth}{1}
+\newpage
+
+% Es wird mit Arabischen Zahlen die Seitenzahl gezählt
+\pagenumbering{arabic} 
+% Es sollen Seitenzahlen mit der aktuellen Überschrift angezeigt werden
+\pagestyle{headings}
+
+\section{Kapitel 1}
+\subfile{sections/Kapitel1.tex}
+\label{kapitel1}
+
+\section{Kapitel 2}
+\subfile{sections/Kapitel2.tex}
+\label{kapitel2}
+
+% Auf neuer Seite wird das Literaturverzeichnis ausgegeben 
+\newpage
+\pagenumbering{Roman} % Ab hier wird die Seitenzahl von 1 an römisch gezählt
+\printbibliography % Literaturverzeichnis
+% \listoffigures % Abbildungsverzeichnis
+\end{document}

@@ -1,0 +1,33 @@
+\documentclass[../main.tex]{subfiles}
+ 
+\begin{document}
+
+\subsection{Zitieren und Verweisen}
+\label{zitieren_und_verweisen}
+Hier wird Abbildung \ref{fig:img_cat} referenziert.
+
+Zieren einer Quelle: "Penis Penis", (\cite[Seite 11]{theoretischeinformatik}).
+
+Weil ich es kann\footcite{spektumperformance}, verweise ich auf eine Quelle.
+
+Um es nicht noch einmal einzubinden, hier nochmal der Link zu Kapitel \ref{kapitel1} für das Katzenbild. Übrigens kann auch ein Unterkapitel, wie \ref{zeichnungen_und_formeln} verwiesen werden.
+
+\subsection{Zeichnungen und Formeln}
+\label{zeichnungen_und_formeln}
+Als Beispiel für Zeichnungen und Formeln hier die formale Definition eines Automaten:
+$$A_{alterAutomat} = (\Sigma, S, \delta, s_{0}, F)$$
+$$\Sigma = \left\{0, 1, 2\right\}$$
+$$S = \left\{Blau, BlauB, Rot1, Rot2, Rot3, RotB\right\}$$
+$$\delta(Blau, 0) = Blau; \delta(Blau, 1) = Rot1; \delta(Blau, 2) = RotB;$$
+$$\delta(BlauB, 0) = Blau; \delta(BlauB, 1) = Rot1; \delta(BlauB, 2) = RotB;$$
+$$\delta(Rot1, 0) = BlauB; \delta(Rot1, 1) = Rot2; \delta(Rot1, 2) = RotB;$$
+$$\delta(Rot2, 0) = BlauB; \delta(Rot2, 1) = Blau3; \delta(Rot2, 2) = RotB;$$
+$$\delta(Rot3, 0) = BlauB; \delta(Rot3, 1) = RotB; \delta(Rot3, 2) = RotB;$$
+$$\delta(RotB, 0) = BlauB; \delta(RotB, 1) = RotB; \delta(RotB, 2) = RotB$$
+$$s_{0} = Blau$$
+$$F = \left\{\right\}$$
+Und die dazugehörige grafische Darstellung des Automaten. Diese ist ausgelagert, um die Datei übersichtlich zu halten:
+
+\subfile{drawings/automat.tex}
+
+\end{document}
