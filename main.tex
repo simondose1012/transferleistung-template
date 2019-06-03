@@ -70,6 +70,10 @@
 % Auf neuer Seite wird das Literaturverzeichnis ausgegeben 
 \newpage
 \pagenumbering{Roman} % Ab hier wird die Seitenzahl von 1 an römisch gezählt
-\printbibliography % Literaturverzeichnis
-% \listoffigures % Abbildungsverzeichnis
+\printbibliography[heading=bibintoc] % Literaturverzeichnis
+
+% Abbildungsverzeichnis
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+\listoffigures
+
 \end{document}
