@@ -13,3 +13,5 @@ Als Editor verwende ich TeXMaker (http://www.xm1math.net/texmaker/). Hierbei mus
 "Schnelles Übersetzen" muss dabei immer auf der **main.tex** ausgeführt werden und auf *"PdfLaTeX + Bib(la)tex + PdfLaTeX (x2) + PDF anzeigen"* gestellt sein in den Einstellungen.
 
 Falls benötigt, hier noch ein kleines LaTeX-Cheatsheet: https://wch.github.io/latexsheet/latexsheet-a4.pdf
+
+Wie das LaTeX-Dokument am Ende aussehen könnte, kann man in **main.pdf** sehen.
