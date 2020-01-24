@@ -26,7 +26,8 @@ Benötigte Plugins:
 - **LaTeX Utilities** (https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities)
 
 Konfiguration (für TeX Live):
-'''
+
+```
 {
 "workbench.iconTheme": "vscode-icons",
 "workbench.colorTheme": "Visual Studio Light",
@@ -174,4 +175,4 @@ Konfiguration (für TeX Live):
 }
 ]
 }
-'''
+```
