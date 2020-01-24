@@ -11,8 +11,7 @@
 
 \usepackage[main=ngerman, english]{babel} % Setzt Dokument auf Deutsch
 
-% Setzt alle Seiteränder auf 2cm
-\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
+\usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry} % Setzt alle Seiteränder auf 2cm
 \usepackage{subfiles} % Für mehr Übersicht werden die Kapitel in Subfiles ausgelagert
 \usepackage[T1]{fontenc} % Font wird westeuropäisch angefordert
 \usepackage[utf8]{inputenc} % Zeichensatz auf UTF8
@@ -63,20 +62,15 @@
 
 \pagestyle{empty} % Zu Anfang sollen keine Seitenzahlen angezeigt werden
 
-% Titelseite einbinden
-\subfile{Titelseite.tex}
+\subfile{Titelseite.tex} % Titelseite einbinden
 
-% Inhaltsverzeichnis einbinden
-\tableofcontents
-% Sections als oberste Ebene des Inhaltsverzeichnis festlegen
-\setcounter{tocdepth}{1}
+\tableofcontents % Inhaltsverzeichnis einbinden
+\setcounter{tocdepth}{1} % Sections als oberste Ebene des Inhaltsverzeichnis festlegen
 
 \newpage
 
-% Es wird mit Arabischen Zahlen die Seitenzahl gezählt
-\pagenumbering{arabic} 
-% Es sollen Seitenzahlen mit der aktuellen Überschrift angezeigt werden
-\pagestyle{headings}
+\pagenumbering{arabic} % Es wird mit Arabischen Zahlen die Seitenzahl gezählt
+\pagestyle{headings} % Es sollen Seitenzahlen mit der aktuellen Überschrift angezeigt werden
 
 \section{Kapitel 1}
 \subfile{sections/Kapitel1.tex}
@@ -86,14 +80,13 @@
 \subfile{sections/Kapitel2.tex}
 \label{kapitel2}
 
-% Auf neuer Seite wird das Literaturverzeichnis ausgegeben 
-\newpage
+\newpage % Auf neuer Seite wird das Literaturverzeichnis ausgegeben 
 \pagenumbering{Roman} % Ab hier wird die Seitenzahl von 1 an römisch gezählt
 \printbibliography[heading=bibintoc] % Literaturverzeichnis
 
 \newpage
-% Abbildungsverzeichnis
-\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+
+\addcontentsline{toc}{section}{Abbildungsverzeichnis} % Abbildungsverzeichnis
 \listoffigures
 
 \end{document}
