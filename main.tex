@@ -7,20 +7,22 @@
 % % Zeilenabstand: 1,25 mit Blocksatz und Silbentrennung
 % % Zitation: übliche Zitierweise aus dem ausgewählten Fachgebiet
 
-\documentclass[12pt, a4paper, onecolumn, oneside, titlepage]{article}
- 
+\documentclass[12pt, a4paper, onecolumn, oneside, titlepage, ngerman]{article}
+
+\usepackage[main=ngerman, english]{babel} % Setzt Dokument auf Deutsch
+
 % Setzt alle Seiteränder auf 2cm
 \usepackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry}
 \usepackage{subfiles} % Für mehr Übersicht werden die Kapitel in Subfiles ausgelagert
 \usepackage[T1]{fontenc} % Font wird westeuropäisch angefordert
 \usepackage[utf8]{inputenc} % Zeichensatz auf UTF8
 \usepackage{csquotes} % Aktiviert Zitate
+\MakeOuterQuote{"} % Aktiviert die Erkennung von Anführungszeichen, sodass diese sprachenspezifisch (für Deutsch, weil oben definiert) dargestellt werden
 \usepackage{hyperref} % Aktiviert automatische Erkennung von Hyperlinks
 \usepackage{tikz} % Wird für die Zeichnungen direkt in LaTeX benötigt
 \usepackage{float} % Für korrekte Positionierung von Abbildungen
 \usepackage{graphicx} % Um Bilder einbinden zu können
 
-\usepackage[main=ngerman, english]{babel} % Setzt Dokument auf Deutsch
 \usepackage{microtype} % Wenn man dem Internet glaubt, macht dieses Paket allgemein einfach alles besser, also rein damit!
 
 \usepackage{pgfplots} % Für Diagramme und sowas
