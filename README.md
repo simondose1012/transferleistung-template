@@ -25,7 +25,7 @@ Benötigte Plugins:
 - **LaTeX Workshop** (https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 - **LaTeX Utilities** (https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities)
 
-Konfiguration (für TeX Live):
+Konfiguration (für Visual Studio Code):
 
 ```
 {
