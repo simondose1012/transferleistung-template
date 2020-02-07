@@ -8,7 +8,7 @@
 
 *.log
 
-*.pdf
+main.pdf
 
 *.run.xml
 
@@ -19,3 +19,5 @@
 *.out
 
 *.lof
+
+sections/*.pdf
