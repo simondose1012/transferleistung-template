@@ -35,8 +35,8 @@ Meine Settings für Visual Studio Code: https://gist.github.com/simondose1012/1c
 ## Nutzung von Draw.io
 
 - Am besten die Desktop-Version nutzen: https://github.com/jgraph/drawio-desktop/releases
-- Die .drawio-Dateien am besten unter `/drawings/drawio` speichern
-- Unter `/drawings/drawio` die Zeichnungen als cropped PDF speichern, dies kann auch mit folgendem Script (unter Linux) automatisiert werden:
+- Die .drawio-Dateien am besten unter `/drawings` speichern
+- Unter `/drawings` die Zeichnungen als cropped PDF speichern, dies kann auch mit folgendem Script (unter Linux) automatisiert werden:
   ```
   /usr/bin/find ./drawings/drawio -name *.drawio -exec rm -f {}.pdf \; -exec /usr/local/bin/draw.io --crop -x -o {}.pdf {} \;
   ```
