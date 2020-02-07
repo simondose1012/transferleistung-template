@@ -8,8 +8,6 @@
 
 *.log
 
-*.pdf
-
 *.run.xml
 
 *.synctex.gz
@@ -19,5 +17,3 @@
 *.out
 
 *.lof
-
-main.pdf
