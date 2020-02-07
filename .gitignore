@@ -8,6 +8,8 @@
 
 *.log
 
+*.pdf
+
 *.run.xml
 
 *.synctex.gz
