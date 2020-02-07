@@ -39,7 +39,7 @@
 \xapptobibmacro{cite}{\setunit{\nametitledelim}\printfield{year}}{}{}
 
 \addbibresource{quellen.bib} % Bindet Quellen aus quellen.bib ein
-\nocite{*} % Zeigt alle (auch nicht zitierten) Einträge der Quellendatei im Literaturverzeichnis an
+% \nocite{*} % Zeigt alle (auch nicht zitierten) Einträge der Quellendatei im Literaturverzeichnis an
 
 % Nur einmaliges Auflisten pro Seite für eine Quelle. Von: https://tex.stackexchange.com/a/408064
 \usepackage{xparse}% for multiple optional parameters
@@ -86,7 +86,11 @@
 
 \newpage
 
-\addcontentsline{toc}{section}{Abbildungsverzeichnis} % Abbildungsverzeichnis
+% Abbildungsverzeichnis
+\addcontentsline{toc}{section}{\listfigurename} % Hinzufügen zum Inhaltsverzeichnis
 \listoffigures
+% Tabellenverzeichnis
+\addcontentsline{toc}{section}{\listtablename} % Hinzufügen zum Inhaltsverzeichnis
+\listoftables\listoffigures
 
 \end{document}
