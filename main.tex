@@ -32,6 +32,8 @@
 \setstretch{1.25}
 \usepackage{mathptmx} % Aktiviert Times New Roman als Standardschrift
 
+\newcounter{savepage} % Aktiviert die Möglichkeit der Fortsetzung von Seitenzahlen zu einem späteren Zeitpunkt
+
 % Aktiviert Quellenverzeichnis mit APA-Style und legt Zitatstil für Fußleiste fest
 \usepackage[backend=biber, bibencoding=utf8, style=apa, citestyle=authortitle]{biblatex}
 % Füge zu Fußzeilen-Verweisen die Jahreszahl hinzu
@@ -60,9 +62,11 @@
 
 \begin{document}
 
-\pagestyle{empty} % Zu Anfang sollen keine Seitenzahlen angezeigt werden
+\pagenumbering{Roman} % Zu Anfang sollen römische Seitenzahlen angezeigt werden
 
 \subfile{Titelseite.tex} % Titelseite einbinden
+
+\newpage
 
 \tableofcontents % Inhaltsverzeichnis einbinden
 \setcounter{tocdepth}{1} % Sections als oberste Ebene des Inhaltsverzeichnis festlegen
@@ -78,6 +82,7 @@
 
 \newpage
 
+\setcounter{savepage}{\arabic{page}} % Vorige Seitenzahl speichern
 \pagenumbering{arabic} % Es wird mit Arabischen Zahlen die Seitenzahl gezählt
 \pagestyle{headings} % Es sollen Seitenzahlen mit der aktuellen Überschrift angezeigt werden
 
@@ -90,7 +95,10 @@
 \label{kapitel2}
 
 \newpage % Auf neuer Seite wird das Literaturverzeichnis ausgegeben 
-\pagenumbering{Roman} % Ab hier wird die Seitenzahl von 1 an römisch gezählt
+
+\pagenumbering{Roman} % Das Literaturverzeichnis wird römisch nummeriert
+\setcounter{page}{\thesavepage} % Die römische Nummerierung soll fortgesetzt werden
+
 \printbibliography[heading=bibintoc] % Literaturverzeichnis
 
 \end{document}
