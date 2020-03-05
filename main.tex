@@ -68,6 +68,8 @@
 
 \newpage
 
+\pagestyle{headings} % Es sollen Seitenzahlen mit der aktuellen Überschrift angezeigt werden
+
 \tableofcontents % Inhaltsverzeichnis einbinden
 \setcounter{tocdepth}{1} % Sections als oberste Ebene des Inhaltsverzeichnis festlegen
 
@@ -76,15 +78,17 @@
 % Abbildungsverzeichnis
 \addcontentsline{toc}{section}{\listfigurename} % Hinzufügen zum Inhaltsverzeichnis
 \listoffigures
+
+\newpage
+
 % Tabellenverzeichnis
 \addcontentsline{toc}{section}{\listtablename} % Hinzufügen zum Inhaltsverzeichnis
-\listoftables\listoffigures
+\listoftables
 
 \newpage
 
 \setcounter{savepage}{\arabic{page}} % Vorige Seitenzahl speichern
 \pagenumbering{arabic} % Es wird mit Arabischen Zahlen die Seitenzahl gezählt
-\pagestyle{headings} % Es sollen Seitenzahlen mit der aktuellen Überschrift angezeigt werden
 
 \section{Kapitel 1}
 \subfile{sections/Kapitel1.tex}
