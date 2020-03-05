@@ -69,6 +69,15 @@
 
 \newpage
 
+% Abbildungsverzeichnis
+\addcontentsline{toc}{section}{\listfigurename} % Hinzufügen zum Inhaltsverzeichnis
+\listoffigures
+% Tabellenverzeichnis
+\addcontentsline{toc}{section}{\listtablename} % Hinzufügen zum Inhaltsverzeichnis
+\listoftables\listoffigures
+
+\newpage
+
 \pagenumbering{arabic} % Es wird mit Arabischen Zahlen die Seitenzahl gezählt
 \pagestyle{headings} % Es sollen Seitenzahlen mit der aktuellen Überschrift angezeigt werden
 
@@ -83,14 +92,5 @@
 \newpage % Auf neuer Seite wird das Literaturverzeichnis ausgegeben 
 \pagenumbering{Roman} % Ab hier wird die Seitenzahl von 1 an römisch gezählt
 \printbibliography[heading=bibintoc] % Literaturverzeichnis
-
-\newpage
-
-% Abbildungsverzeichnis
-\addcontentsline{toc}{section}{\listfigurename} % Hinzufügen zum Inhaltsverzeichnis
-\listoffigures
-% Tabellenverzeichnis
-\addcontentsline{toc}{section}{\listtablename} % Hinzufügen zum Inhaltsverzeichnis
-\listoftables\listoffigures
 
 \end{document}
