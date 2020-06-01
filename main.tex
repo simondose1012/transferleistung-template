@@ -43,22 +43,9 @@
 \addbibresource{quellen.bib} % Bindet Quellen aus quellen.bib ein
 % \nocite{*} % Zeigt alle (auch nicht zitierten) Einträge der Quellendatei im Literaturverzeichnis an
 
-% Nur einmaliges Auflisten pro Seite für eine Quelle. Von: https://tex.stackexchange.com/a/408064
-\usepackage{xparse}% for multiple optional parameters
-\usepackage{ifoddpage}% get correct page number
-\makeatletter
-\let\oldfootcite=\footcite
-\RenewDocumentCommand{\footcite}{oom}{\checkoddpage
-  \@ifundefined{citepage@#3}{}%
-  {\ifnum\csname citepage@#3\endcsname<\oddpage@page\relax
-      \global\expandafter\let\csname repeatcite@#3\endcsname=\relax
-  \fi}%
-  \@ifundefined{repeatcite@#3}%
-  {\oldfootcite[#1][#2]{#3}%
-    \expandafter\xdef\csname repeatcite@#3\endcsname{\thefootnote}%
-    \expandafter\xdef\csname citepage@#3\endcsname{\arabic{page}}}%
-  {\footnotemark[\csname repeatcite@#3\endcsname]}}
-\makeatother
+% Aktiviert die Kommaseparation beim Verwenden mehrerer Fußnotenzitate direkt nacheinander
+\usepackage{fnpct}
+\AdaptNoteOpt\footcite\multfootcite
 
 \begin{document}
 
